@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="avatar.png" alt="Avatar" class="avatar">
+                <span class="username">pushparaj</span>
+            </div>
+            <input type="text" class="search-bar" placeholder="Search...">
+            <div class="contacts">
+                <div class="contact">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-info">
+                        <span class="contact-name">Voiceroom</span>
+                        <span class="contact-message">Short message preview</span>
+                    </div>
+                    <span class="contact-date">12:00</span>
+                </div>
+                <div class="contact">
+                    <div class="contact-icon">🎥</div>
+                    <div class="contact-info">
+                        <span class="contact-name">Live</span>
+                        <span class="contact-message">Short message preview</span>
+                    </div>
+                    <span class="contact-date">11:30</span>
+                </div>
+                <div class="contact">
+                    <div class="contact-icon">📝</div>
+                    <div class="contact-info">
+                        <span class="contact-name">chitti</span>
+                        <span class="contact-message">Short message preview</span>
+                    </div>
+                    <span class="contact-date">08:45</span>
+                </div>
+                <!-- Add more contacts as needed -->
+            </div>
+        </div>
+        <div class="chat-section">
+            <div class="no-chat">
+                <div class="chat-illustration">💬💬</div>
+                <div class="no-chat-text">No chats selected</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
