@@ -1,53 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat UI</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="profile">
-                <img src="avatar.png" alt="Avatar" class="avatar">
-                <span class="username">pushparaj</span>
-            </div>
-            <input type="text" class="search-bar" placeholder="Search...">
-            <div class="contacts">
-                <div class="contact">
-                    <div class="contact-icon">📞</div>
-                    <div class="contact-info">
-                        <span class="contact-name">Voiceroom</span>
-                        <span class="contact-message">Short message preview</span>
-                    </div>
-                    <span class="contact-date">12:00</span>
-                </div>
-                <div class="contact">
-                    <div class="contact-icon">🎥</div>
-                    <div class="contact-info">
-                        <span class="contact-name">Live</span>
-                        <span class="contact-message">Short message preview</span>
-                    </div>
-                    <span class="contact-date">11:30</span>
-                </div>
-                <div class="contact">
-                    <div class="contact-icon">📝</div>
-                    <div class="contact-info">
-                        <span class="contact-name">chitti</span>
-                        <span class="contact-message">Short message preview</span>
-                    </div>
-                    <span class="contact-date">08:45</span>
-                </div>
-                <!-- Add more contacts as needed -->
-            </div>
-        </div>
-        <div class="chat-section">
-            <div class="no-chat">
-                <div class="chat-illustration">💬💬</div>
-                <div class="no-chat-text">No chats selected</div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+import javax.swing.*;
+import java.awt.*;
+
+public class ChatUI extends JFrame {
+    public ChatUI() {
+        setTitle("Chat Application");
+        setSize(900, 600);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        // Main layout
+        setLayout(new BorderLayout());
+
+        // Sidebar panel (left)
+        JPanel sidebar = new JPanel();
+        sidebar.setLayout(new BorderLayout());
+        sidebar.setPreferredSize(new Dimension(300, 600));
+        sidebar.setBackground(Color.WHITE);
+
+        // Profile Panel
+        JPanel profilePanel = new JPanel();
+        profilePanel.setBackground(Color.WHITE);
+        profilePanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+        JLabel profileLabel = new JLabel("👤 pushparaj");
+        profileLabel.setFont(new Font("Arial", Font.BOLD, 18));
+        profilePanel.add(profileLabel);
+
+        // Chat List Panel
+        DefaultListModel<String> chatModel = new DefaultListModel<>();
+        chatModel.addElement("user");
+        chatModel.addElement("user");
+        chatModel.addElement("user");
+        chatModel.addElement("user");
+        chatModel.addElement("user");
+        chatModel.addElement("user");
+        chatModel.addElement("user");
+        chatModel.addElement("user");
+
+        JList<String> chatList = new JList<>(chatModel);
+        chatList.setFont(new Font("Arial", Font.PLAIN, 16));
+        JScrollPane chatScroll = new JScrollPane(chatList);
+
+        // Add search bar
+        JTextField searchField = new JTextField(" Search...");
+        searchField.setPreferredSize(new Dimension(250, 30));
+
+        JPanel searchPanel = new JPanel();
+        searchPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+        searchPanel.add(searchField);
+        searchPanel.setBackground(Color.WHITE);
+
+        sidebar.add(profilePanel, BorderLayout.NORTH);
+        sidebar.add(searchPanel, BorderLayout.CENTER);
+        sidebar.add(chatScroll, BorderLayout.SOUTH);
+
+        // Chat view panel (right)
+        JPanel chatView = new JPanel();
+        chatView.setBackground(new Color(245, 246, 250));
+        chatView.setLayout(new BorderLayout());
+
+        JLabel noChatLabel = new JLabel("No chats selected", SwingConstants.CENTER);
+        noChatLabel.setFont(new Font("Arial", Font.PLAIN, 24));
+        chatView.add(noChatLabel, BorderLayout.CENTER);
+
+        // Add to main frame
+        add(sidebar, BorderLayout.WEST);
+        add(chatView, BorderLayout.CENTER);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new ChatUI().setVisible(true);
+        });
+    }
+}
