@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngTalk Premium Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #6A11CB, #2575FC);
+      color: #ffffff;
+    }
+    .login-container {
+      background-color: #ffffff;
+      color: #333;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .login-container h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #2575FC;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .login-container button {
+      background-color: #2575FC;
+      color: #ffffff;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .login-container button:hover {
+      background-color: #1a5bb8;
+    }
+    .premium-note {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+    .premium-note a {
+      color: #2575FC;
+      text-decoration: none;
+    }
+    .premium-note a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>EngTalk Premium Login</h1>
+    <form>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="premium-note">
+      Not a Premium Member? <a href="#">Subscribe Now</a>
+    </div>
+  </div>
+</body>
+</html>
