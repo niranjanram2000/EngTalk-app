@@ -12,7 +12,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url('https://github.com/niranjanram2000/EngTalk-app/blob/main/EngTalk-background.png') no-repeat center center/cover;
+            background: url('![EngTalk-background](https://github.com/user-attachments/assets/d40afc4d-adac-4b2a-a814-aaeb2ee9ebe2)
+') no-repeat center center/cover;
             font-family: 'Arial', sans-serif;
         }
 
