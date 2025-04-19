@@ -7,7 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://github.com/niranjanram2000/EngTalk-app/blob/main/EngTalk-background.png'); /* Replace 'background.jpg' with the path to your image */
+            background-image: url('![EngTalk-background](https://github.com/user-attachments/assets/b859db43-4af2-4714-93f6-6831b053fac5)
+); /* Replace 'background.jpg' with the path to your image */
             background-size: cover; /* Ensures the image covers the entire background */
             background-position: center; /* Centers the image */
             background-repeat: no-repeat; /* Prevents the image from repeating */
